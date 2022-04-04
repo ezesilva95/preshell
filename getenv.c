@@ -1,7 +1,7 @@
 #include "main.h"
 /*
-
-
+*
+*
 */
 int _getenv(char *name)
 {:
@@ -30,3 +30,22 @@ int _getenv(char *name)
 	}
 	return (-1);
 }
+
+
+char *tokenenv( char *name)
+{
+	char *token = NULL, *name2;
+	int count;
+
+
+	name2 = strdup(name);
+	
+	while (name[count])
+	{
+		count++;
+
+		if(name[count] != "=")
+		{
+			count++;
+		}
+
